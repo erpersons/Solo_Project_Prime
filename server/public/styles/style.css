@@ -11,8 +11,8 @@ body, html {
 }
 
 .instructions {
-  background-color: #333333;
-  color: #DDDDDD;
+  background-color: #9d8189;
+  color: #ffcad4;
   padding: 15px;
 }
 
@@ -49,9 +49,45 @@ body, html {
 }
 
 .navbar {
-  background-color: #333333;
+  background-color: #f4acb7;
   width: 100%;
   border-radius: 0px;
+}
+
+.lead {
+  font-family: monospace;
+}
+
+.register_form{
+  font-family: monospace;
+}
+
+.btn{
+  font-family: monospace;
+}
+
+.register {
+  font-family: monospace;
+}
+
+.password{
+  font-family: monospace;
+}
+
+.username {
+  font-family: monospace;
+}
+
+  .allFoods {
+  font-family:monospace;
+}
+
+.home {
+  font-family: monospace;
+}
+
+.viewAll {
+  font-family: monospace;
 }
 
 ul {
