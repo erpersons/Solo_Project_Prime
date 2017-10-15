@@ -1,6 +1,13 @@
 var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
+// var path = require('path');
+//~~~~
+
+// app.use(express.static('./server/public')); 
+
+//~~~~ correct places ^^ ??
+
 
 var passport = require('./strategies/mongo.localstrategy');
 var sessionConfig = require('./modules/session.config');
@@ -13,7 +20,11 @@ var indexRouter = require('./routes/index.router');
 var userRouter = require('./routes/user.router');
 var registerRouter = require('./routes/register.router');
 
+
 var port = process.env.PORT || 5000;
+//~~~
+// var send = require('./routes/send-sms'); //send
+//~~~
 
 // Body parser middleware
 app.use(bodyParser.json());
@@ -32,6 +43,9 @@ app.use(passport.session());
 // Routes
 app.use('/register', registerRouter);
 app.use('/user', userRouter);
+//~~~
+// app.use('/send-sms', send); //send-sms
+//~~~
 
 // Catch all bucket, must be last!
 app.use('/', indexRouter);

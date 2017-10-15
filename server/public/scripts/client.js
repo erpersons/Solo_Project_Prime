@@ -1,5 +1,21 @@
 var myApp = angular.module('myApp', ['ngRoute']);
 
+
+// myApp.controller('TextController', function ($http) {
+//     var vm = this;
+
+//     vm.sendText = function () {
+//         vm.text = {
+//             message: 'The unexamined life is not a life worth living'
+//         };
+//         $http({
+//             method: 'POST',
+//             url: '/send-sms',
+//             data: vm.text
+//         });
+//     };
+// });
+
 /// Routes ///
 myApp.config(function($routeProvider, $locationProvider) {
   $locationProvider.hashPrefix('');
