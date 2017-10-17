@@ -3,11 +3,7 @@ var app = express();
 var bodyParser = require('body-parser');
 // var path = require('path');
 //~~~~
-
-// app.use(express.static('./server/public')); 
-
-//~~~~ correct places ^^ ??
-
+require('dotenv').config(); //to source .env
 
 var passport = require('./strategies/mongo.localstrategy');
 var sessionConfig = require('./modules/session.config');
@@ -23,7 +19,7 @@ var registerRouter = require('./routes/register.router');
 
 var port = process.env.PORT || 5000;
 //~~~
-// var send = require('./routes/send-sms'); //send
+var send = require('./routes/send-sms'); //send
 //~~~
 
 // Body parser middleware
@@ -44,7 +40,7 @@ app.use(passport.session());
 app.use('/register', registerRouter);
 app.use('/user', userRouter);
 //~~~
-// app.use('/send-sms', send); //send-sms
+app.use('/send-sms', send); //send-sms
 //~~~
 
 // Catch all bucket, must be last!

@@ -90,6 +90,10 @@ body, html {
   font-family: monospace;
 }
 
+.sendTextBtn{
+  font-family: monospace;
+}
+
 ul {
   list-style-type: none;
   margin: 0;
