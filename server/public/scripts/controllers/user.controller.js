@@ -20,7 +20,7 @@ myApp.controller('UserController', function (UserService, $http) {
       days: vm.daysIn,
       user: vm.userObject.userName
     };
-    console.log(vm.foodStuff);
+    console.log('vm.foodStuff ->', vm.foodStuff);
     $http({
       method: 'POST',
       url: '/addfood',

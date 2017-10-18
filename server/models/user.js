@@ -46,11 +46,11 @@ UserSchema.methods.comparePassword = function(candidatePassword, callback) {
 };
 
 //food Schema
-var itemSchema = new Schema({
-    food: String,
-    days: Number
-});
-var Foods = mongoose.model('list', itemSchema);
+// var itemSchema = new Schema({
+//     food: String,
+//     days: Number
+// });
+// var Foods = mongoose.model('list', itemSchema);
 
-module.exports = Foods;
+// module.exports = Foods;
 module.exports = mongoose.model('User', UserSchema);
