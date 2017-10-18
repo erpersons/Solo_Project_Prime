@@ -4,11 +4,21 @@
     <h1 id="welcome" class="lead">Namaste & Happy Eating, {{uc.userObject.userName}}!</h1>
 
     <p class="nameText">Food Name : </p>
-    <input class="foodInput" placeholder="food name" type="text"><br>
+
+    <!-- food input -->
+    <input ng-model="uc.foodIn" class="foodInput" placeholder="food name" type="text"><br>
     <p class="expirationText">Days until expiration : </p>
-    <input class="daysInput" placeholder="# of days" type="text"> <br>
-    <button class="newFoodButton" class="btn btn-default">Add New Food</button> <br>
+
+    <!-- days input -->
+    <input ng-model="uc.daysIn" class="daysInput" placeholder="# of days" type="text"> <br>
+
+    <!-- Add Food Button -->
+    <button ng-click="uc.addFoodItem()"class="newFoodButton" class="btn btn-default">Add New Food</button> <br>
+
+    <!-- Log Out Button -->
     <button class="btn btn-default" ng-click="uc.userService.logout()">Log Out</button>
+
+    <!-- Send Text Button -->
     <button class="sendTextBtn" ng-click="uc.sendText()">Send Text</button>
 
 </div>

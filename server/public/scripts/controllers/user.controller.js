@@ -13,4 +13,19 @@ myApp.controller('UserController', function (UserService, $http) {
       data: vm.text
     });
   };
+
+  vm.addFoodItem = function () {
+    vm.foodStuff = {
+      food: vm.foodIn, 
+      days: vm.daysIn,
+      user: vm.userObject.userName
+    };
+    console.log(vm.foodStuff);
+    $http({
+      method: 'POST',
+      url: '/addfood',
+      data: vm.foodStuff
+     
+    })
+  }
 });

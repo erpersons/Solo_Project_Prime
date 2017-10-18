@@ -113,6 +113,10 @@ html {
   font-family: monospace;
 }
 
+.daysInput {
+  font-family: monospace;
+}
+
 ul {
   list-style-type: none;
   margin: 0;
