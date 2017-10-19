@@ -15,7 +15,8 @@ router.post('/', function (req, res) {
 
     var something = {
         food: req.body.food,
-        days: req.body.days
+        days: req.body.days,
+        userName: req.body.userName
     }
     console.log(something);
 
@@ -34,11 +35,12 @@ router.post('/', function (req, res) {
 
     var newFood = new FoodCollection({
         food: req.body.food,
-        days: req.body.days
+        days: req.body.days,
+        userName: req.body.userName
     });
     newFood.save(function (err) {
         if (err) {
-            console.log('no worky');
+            console.log('no worky:', err );
             res.sendStatus(500);
         } else {
             res.sendStatus(200);

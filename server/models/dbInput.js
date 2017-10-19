@@ -6,19 +6,25 @@ var Schema = mongoose.Schema;
 //     // username: String //-> no good
 // });
 
-var foodSchema = new Schema({ 
-    food: String,
-    days: Number
- });
+// var foodSchema = new Schema({ 
+//     food: String,
+//     days: Number
+//  });
 
-var userSchema = new Schema({
-    // Array of subdocuments
-    nourishment: [foodSchema],
-    // Single nested subdocuments. Caveat: single nested subdocs only work
-    // in mongoose >= 4.2.0
-    // child: childSchema
+var foodSchema = new Schema({
+    food: String,
+    days: Number,
+    userName: String
 });
 
-var Foods = mongoose.model('food', foodSchema);
+// var userSchema = new Schema({
+//     // Array of subdocuments
+//     nourishment: [foodSchema],
+//     // Single nested subdocuments. Caveat: single nested subdocs only work
+//     // in mongoose >= 4.2.0
+//     // child: childSchema
+// });
+
+var Foods = mongoose.model('foodSchema', foodSchema);
 
 module.exports = Foods;

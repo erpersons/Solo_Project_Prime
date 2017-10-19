@@ -18,10 +18,11 @@ myApp.controller('UserController', function (UserService, $http) {
   };
 
   vm.addFoodItem = function () {
+    console.log('userObject', vm.userObject)
     vm.foodStuff = {
       food: vm.foodIn, 
       days: vm.daysIn,
-      user: vm.userObject.userName
+      userName: vm.userObject.userName
     };
     console.log('vm.foodStuff ->', vm.foodStuff);
     $http({

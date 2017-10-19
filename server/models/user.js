@@ -3,11 +3,19 @@ var Schema = mongoose.Schema;
 var bcrypt = require('bcrypt');
 var SALT_WORK_FACTOR = 10;
 
+// var foodSchema = new Schema({
+//     food: String,
+//     days: Number,
+//     userId: String
+// });
+
 // Mongoose Schema
 var UserSchema = new Schema({
     username: {type: String, required: true, index: {unique: true}},
-    password: {type: String, required: true}
+    password: {type: String, required: true},
 });
+
+
 
 // Called before adding a new user to the DB. Encrypts password.
 UserSchema.pre('save', function(next) {
