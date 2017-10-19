@@ -3,6 +3,9 @@ myApp.controller('UserController', function (UserService, $http) {
   var vm = this;
   vm.userService = UserService;
   vm.userObject = UserService.userObject;
+  
+  vm.myFoodCollection = UserService.myFoodCollection;
+  
   vm.sendText = function () {
     vm.text = {
       message: 'The unexamined life is not worth living'
@@ -28,4 +31,8 @@ myApp.controller('UserController', function (UserService, $http) {
      
     })
   }
+  vm.getMyFoods = function () {
+    UserService.getfood();
+  }
+  vm.getMyFoods();
 });

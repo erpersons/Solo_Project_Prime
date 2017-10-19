@@ -40,7 +40,7 @@ app.use(passport.session());
 // Routes
 app.use('/register', registerRouter);
 app.use('/user', userRouter);
-app.use('/addfood', addFood);
+app.use('/add-food', addFood);
 //~~~
 app.use('/send-sms', send); //send-sms
 //~~~

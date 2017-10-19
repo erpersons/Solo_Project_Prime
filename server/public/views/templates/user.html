@@ -1,5 +1,5 @@
 <div ng-include="'views/partials/nav.html'"></div>
-<div class="container">
+<div ng-controller="UserController" class="container">
 
     <h1 id="welcome" class="lead">Namaste & Happy Eating, {{uc.userObject.userName}}!</h1>
 
@@ -20,5 +20,9 @@
 
     <!-- Send Text Button -->
     <button class="sendTextBtn" ng-click="uc.sendText()">Send Text</button>
+
+    <p ng-repeat="x in uc.myFoodCollection.foods">{{ x }}</p>
+
+    <!-- <p>{{uc.userObject.userName}}</p> -->
 
 </div>

@@ -117,6 +117,14 @@ html {
   font-family: monospace;
 }
 
+.userInput {
+  font-family: monospace;
+}
+
+.userRegInput {
+  font-family: monospace;
+}
+
 ul {
   list-style-type: none;
   margin: 0;

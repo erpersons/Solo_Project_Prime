@@ -2,18 +2,18 @@ var express = require('express');
 var router = require('express').Router();
 var path = require('path');
 var mongoose = require('mongoose');
-var Foods = require('../models/dbInput.js')
+var FoodCollection = require('../models/dbInput.js')
 
-checkthedate = 'mongodb://localhost:27017/checkthedate'
+// checkthedate = 'mongodb://localhost:27017/checkthedate'
 
-mongoose.connect(checkthedate);
+// mongoose.connect(checkthedate);
 
-router.post('/', function (req, res){
+router.post('/', function (req, res) {
     var toAdd = req.body
 
     var something = {
         food: req.body.food,
-        days: req.body.days
+        days: req.body.days,
     }
     console.log(something);
 
@@ -35,17 +35,18 @@ router.post('/', function (req, res){
         if (err) {
             console.log('no worky');
             res.sendStatus(500);
-        }
-        else {
+        } else {
             res.sendStatus(200);
         }
-})
+    })
+
+    
+});
 
 router.get('/', function (req, res) {
-    FoodCollection.find({}).then( function( stuff ){
-        console.log( 'stuff:', stuff );
-        res.send( stuff );
+    FoodCollection.find({}).then(function (stuff) {
+        console.log('stuff:', stuff);
+        res.send(stuff);
     });
-})
 });
 module.exports = router;

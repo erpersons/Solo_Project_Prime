@@ -1,6 +1,7 @@
 <div ng-include="'views/partials/nav.html'"></div>
 <div class="container">
-  <p class="allFoods">
+  <p ng-controller="UserController" class="allFoods">
     All foods view!
+    <p ng-repeat="food in uc.foodStuff">{{food.allFoods}}</p>
   </p>
 </div>
