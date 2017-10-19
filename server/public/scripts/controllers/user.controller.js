@@ -4,7 +4,7 @@ myApp.controller('UserController', function (UserService, $http) {
   vm.userService = UserService;
   vm.userObject = UserService.userObject;
   
-  vm.myFoodCollection = UserService.myFoodCollection;
+  vm.myFoodColl = UserService.myFoodCollection;
 
   vm.sendText = function () {
     vm.text = {
@@ -34,6 +34,7 @@ myApp.controller('UserController', function (UserService, $http) {
   }
   vm.getMyFoods = function () {
     UserService.getfood();
+    console.log('in controller getMyFoods', vm.myFoodColl);
   }
   vm.getMyFoods();
 });
