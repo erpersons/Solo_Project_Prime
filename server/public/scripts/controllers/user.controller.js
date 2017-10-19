@@ -5,7 +5,7 @@ myApp.controller('UserController', function (UserService, $http) {
   vm.userObject = UserService.userObject;
   
   vm.myFoodCollection = UserService.myFoodCollection;
-  
+
   vm.sendText = function () {
     vm.text = {
       message: 'The unexamined life is not worth living'
@@ -26,7 +26,7 @@ myApp.controller('UserController', function (UserService, $http) {
     console.log('vm.foodStuff ->', vm.foodStuff);
     $http({
       method: 'POST',
-      url: '/addfood',
+      url: '/add-food',
       data: vm.foodStuff
      
     })

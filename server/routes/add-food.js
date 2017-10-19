@@ -3,6 +3,8 @@ var router = require('express').Router();
 var path = require('path');
 var mongoose = require('mongoose');
 var FoodCollection = require('../models/dbInput.js')
+var bodyParser = require('body-parser');
+// var Foods = {};
 
 // checkthedate = 'mongodb://localhost:27017/checkthedate'
 
@@ -13,7 +15,7 @@ router.post('/', function (req, res) {
 
     var something = {
         food: req.body.food,
-        days: req.body.days,
+        days: req.body.days
     }
     console.log(something);
 
@@ -30,7 +32,10 @@ router.post('/', function (req, res) {
     //     }
     // )
 
-    var newFood = new Foods(req.body);
+    var newFood = new FoodCollection({
+        food: req.body.food,
+        days: req.body.days
+    });
     newFood.save(function (err) {
         if (err) {
             console.log('no worky');
