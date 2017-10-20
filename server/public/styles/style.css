@@ -125,6 +125,10 @@ html {
   font-family: monospace;
 }
 
+.infoFoods {
+  font-family: monospace;
+}
+
 ul {
   list-style-type: none;
   margin: 0;

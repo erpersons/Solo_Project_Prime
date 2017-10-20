@@ -3,7 +3,6 @@ myApp.controller('UserController', function (UserService, $http) {
   var vm = this;
   vm.userService = UserService;
   vm.userObject = UserService.userObject;
-  
   vm.myFoodColl = UserService.myFoodCollection;
 
   vm.sendText = function () {

@@ -1,7 +1,25 @@
 <div ng-include="'views/partials/nav.html'"></div>
+
 <div class="container">
-  <p ng-controller="UserController" class="allFoods">
-    All foods view!
-    <p ng-repeat="food in uc.foodStuff">{{food.allFoods}}</p>
+
+  <p ng-controller="InfoController" class="allFoods"></p>
+
+  <table>
+    <thead>
+      <th>Food |</th>
+      <th># of days |</th>
+      <th><button>Edit</button> </th>
+      <th><button>Delete</button> </th>
+    </thead>
+
+    <tbody>
+
+      <tr class="infoFoods" ng-repeat="x in ic.myFoodColl.foods">
+        <td>{{ x.food }} </td>
+        <td>{{ x.days }}</td>
+      </tr>
+
+    </tbody>
+  </table>
   </p>
 </div>

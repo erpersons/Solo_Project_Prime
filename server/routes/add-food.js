@@ -20,19 +20,6 @@ router.post('/', function (req, res) {
     }
     console.log(something);
 
-    // FoodCollection.updateOne(({ username: req.body.username },
-    //     { $push: { food: { foodName: req.body.foodInput, numDays: req.body.daysInput } } }, {upsert: true}),
-    //     function (err, response) {
-    //         if (err) {
-    //             res.sendStatus(400);
-    //             console.log('err', err);
-    //         } else {
-    //             console.log('Food added!');
-    //             res.sendStatus(201);
-    //         }
-    //     }
-    // )
-
     var newFood = new FoodCollection({
         food: req.body.food,
         days: req.body.days,
@@ -51,7 +38,8 @@ router.post('/', function (req, res) {
 });
 
 router.get('/', function (req, res) {
-    FoodCollection.find({}).then(function (stuff) {
+    FoodCollection.find({userName : req.user.username}).then(function (stuff) {
+        console.log('req.user.username ->', req.user.username);
         console.log('stuff:', stuff);
         res.send(stuff);
     });
