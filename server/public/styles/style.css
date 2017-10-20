@@ -129,6 +129,14 @@ html {
   font-family: monospace;
 }
 
+.tHead {
+  font-family: monospace;
+}
+
+.listBtn {
+  font-family: monospace;
+}
+
 ul {
   list-style-type: none;
   margin: 0;

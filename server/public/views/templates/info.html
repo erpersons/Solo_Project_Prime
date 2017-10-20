@@ -5,11 +5,11 @@
   <p ng-controller="InfoController" class="allFoods"></p>
 
   <table>
-    <thead>
+    <thead class="tHead"> 
       <th>Food |</th>
       <th># of days |</th>
-      <th><button>Edit</button> </th>
-      <th><button>Delete</button> </th>
+      <!-- <th><button class="listBtn">Edit</button> </th>
+      <th><button class="listBtn">Delete</button> </th> -->
     </thead>
 
     <tbody>
@@ -17,6 +17,8 @@
       <tr class="infoFoods" ng-repeat="x in ic.myFoodColl.foods">
         <td>{{ x.food }} </td>
         <td>{{ x.days }}</td>
+        <td><button ng-click="ic.editFood" class="listBtn">Edit</button> </td>
+        <td><button class="listBtn">Devoured!</button></td>
       </tr>
 
     </tbody>
