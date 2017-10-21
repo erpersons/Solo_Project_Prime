@@ -6,25 +6,22 @@
     <p class="nameText">Food Name : </p>
 
     <!-- food input -->
-    <input ng-model="uc.foodIn" class="foodInput" placeholder="food name" type="text"><br>
+    <input ng-model="uc.foodIn" class="foodInput" placeholder="food name" type="text">
+    <br>
     <p class="expirationText">Days until expiration : </p>
 
     <!-- days input -->
-    <input ng-model="uc.daysIn" class="daysInput" placeholder="# of days" type="text"> <br>
+    <input ng-model="uc.daysIn" class="daysInput" placeholder="# of days" type="text">
+    <br>
 
     <!-- Add Food Button -->
-    <button ng-click="uc.addFoodItem()"class="newFoodButton" class="btn btn-default">Add New Food</button> <br>
+    <button ng-click="uc.addFoodItem()" class="newFoodButton" class="btn btn-default">Add New Food</button>
+    <br>
 
     <!-- Log Out Button -->
     <button class="btn btn-default" ng-click="uc.userService.logout()">Log Out</button>
 
     <!-- Send Text Button -->
     <button class="sendTextBtn" ng-click="uc.sendText()">Send Text</button>
-
-    <!-- <div ng-repeat="x in uc.myFoodColl.foods"> 
-    <p>{{ x.food }}</p>
-    <p>{{ x.days }}</p>
-    </div> -->
-
 
 </div>

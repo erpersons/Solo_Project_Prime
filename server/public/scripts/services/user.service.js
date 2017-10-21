@@ -8,7 +8,7 @@ myApp.factory('UserService', function ($http, $location) {
 
   return {
     userObject: userObject,
-    myFoodCollection : myFoodCollection,
+    myFoodCollection: myFoodCollection,
 
     getuser: function () {
       console.log('UserService -- getuser');
@@ -35,13 +35,16 @@ myApp.factory('UserService', function ($http, $location) {
         $location.path("/home");
       });
     },
-      getfood: function () {
+    getfood: function () {
       $http.get('/add-food').then(function (response) {
         myFoodCollection.foods = response.data
         console.log('getFood response.data ->', response.data);
-        console.log('getfood ->', myFoodCollection.foods); 
+        console.log('getfood ->', myFoodCollection.foods);
       })
-    },
+    }, //end getfood
+   movefood: function () {
+
+   } //end movefood
 
   } //end return
 

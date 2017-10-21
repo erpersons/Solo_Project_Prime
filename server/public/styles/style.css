@@ -99,6 +99,7 @@ html {
 
 .newFoodButton {
   font-family: monospace;
+  background-color: #d8e2dc;
 }
 
 .foodInput {
@@ -133,7 +134,12 @@ html {
   font-family: monospace;
 }
 
-.listBtn {
+.listBtns {
+  font-family: monospace;
+  background-color: #d8e2dc;
+}
+
+.wasteAll {
   font-family: monospace;
 }
 
