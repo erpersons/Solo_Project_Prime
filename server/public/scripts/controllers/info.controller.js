@@ -37,7 +37,7 @@ myApp.controller('InfoController', function (UserService, CheckTheDateService, $
   vm.devourFood = function (foodParam) { //x._id takes the place of foodParam on ng-click
     console.log('in ic.devourFood w/ ->', foodParam);
     CheckTheDateService.devourFood(foodParam).then(function () {
-
+      vm.getMyFoods();
     });
 
 

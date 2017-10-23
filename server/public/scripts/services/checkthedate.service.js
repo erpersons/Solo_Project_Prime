@@ -24,7 +24,7 @@ myApp.service('CheckTheDateService', function ($http) {
         console.log('DELETE devourFood ->', foodToDevour.food);
         return $http({
             method: 'DELETE',
-            url: '/devour-food/info/' + foodToDevour.food // is /info/ correct?? 
+            url: '/devour-food/info/' + foodToDevour.food 
         }); //end $http delete
        
     } //end devourFood
