@@ -8,8 +8,8 @@
     <thead class="tHead">
       <th>Food |</th>
       <th># of days |</th>
-      <!-- <th><button class="listBtn">Edit</button> </th>
-      <th><button class="listBtn">Delete</button> </th> -->
+      <th> |</th>
+      <th>Waste |</th>
     </thead>
 
     <tbody>
@@ -18,15 +18,15 @@
         <td>{{ x.food }} </td>
         <td>{{ x.days }}</td>
         <td>
-          <button ng-click="ic.editFood" class="listBtns">Edit</button>
+          <!-- <button ng-click="ic.editFood" class="listBtns">Edit</button> -->
         </td>
         <td>
           <button ng-click="ic.wasteFoodFunc(x)" class="listBtns">Wasted =(</button>
         </td>
         <td>
-          <button ng-click="ic.devourFood" class="listBtns">Devoured!</button>
+          <button ng-click="ic.devourFood(x._id)" class="listBtns">Devoured!</button>
         </td>
-       
+
       </tr>
 
     </tbody>
@@ -39,8 +39,9 @@
     </thead>
 
     <tbody>
-      <tr class="infoFoods" ng-repeat="x in ic.foodWasteArr" >
-        <td></td>
+      <tr class="infoFoods" ng-repeat="x in ic.foodWasteArr">
+        <td>{{ x.food }}</td>
+        <!-- <td>{{ x.days }}</td> -->
       </tr>
     </tbody>
   </table>

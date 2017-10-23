@@ -3,11 +3,6 @@ var Schema = mongoose.Schema;
 var bcrypt = require('bcrypt');
 var SALT_WORK_FACTOR = 10;
 
-// var foodSchema = new Schema({
-//     food: String,
-//     days: Number,
-//     userId: String
-// });
 
 // Mongoose Schema
 var UserSchema = new Schema({
@@ -53,12 +48,4 @@ UserSchema.methods.comparePassword = function(candidatePassword, callback) {
     });
 };
 
-//food Schema
-// var itemSchema = new Schema({
-//     food: String,
-//     days: Number
-// });
-// var Foods = mongoose.model('list', itemSchema);
-
-// module.exports = Foods;
 module.exports = mongoose.model('User', UserSchema);

@@ -4,21 +4,8 @@ var path = require('path');
 var mongoose = require('mongoose');
 var FoodCollection = require('../models/dbInput.js')
 var bodyParser = require('body-parser');
-// var Foods = {};
-
-// checkthedate = 'mongodb://localhost:27017/checkthedate'
-
-// mongoose.connect(checkthedate);
 
 router.post('/', function (req, res) {
-    var toAdd = req.body
-
-    var something = {
-        food: req.body.food,
-        days: req.body.days,
-        userName: req.body.userName
-    }
-    console.log(something);
 
     var newFood = new FoodCollection({
         food: req.body.food,

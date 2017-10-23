@@ -42,9 +42,6 @@ myApp.factory('UserService', function ($http, $location) {
         console.log('getfood ->', myFoodCollection.foods);
       })
     }, //end getfood
-   movefood: function () {
-
-   } //end movefood
 
   } //end return
 

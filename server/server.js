@@ -16,6 +16,7 @@ var indexRouter = require('./routes/index.router');
 var userRouter = require('./routes/user.router');
 var registerRouter = require('./routes/register.router');
 var addFood = require('./routes/add-food');
+var devourFood = require('./routes/devour-food');
 
 
 var port = process.env.PORT || 5000;
@@ -41,6 +42,7 @@ app.use(passport.session());
 app.use('/register', registerRouter);
 app.use('/user', userRouter);
 app.use('/add-food', addFood);
+app.use('/devour-food', devourFood);
 //~~~
 app.use('/send-sms', send); //send-sms
 //~~~
