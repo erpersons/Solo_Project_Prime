@@ -2,7 +2,7 @@
 
 <div class="container">
 
-  <p ng-controller="InfoController" class="allFoods"></p>
+  <p  class="allFoods"></p>
 
   <table>
     <thead class="tHead">
@@ -32,7 +32,7 @@
     </tbody>
   </table>
 
-  <table>
+  <!-- <table>
     <thead class="tHead">
       <th>Food Waste |</th>
       <th>Date |</th>
@@ -41,9 +41,11 @@
     <tbody>
       <tr class="infoFoods" ng-repeat="x in ic.foodWasteArr">
         <td>{{ x.food }}</td>
-        <!-- <td>{{ x.days }}</td> -->
-      </tr>
+        <td>{{ x.days }}</td>
+
+
+      <!-- </tr>
     </tbody>
-  </table>
+  </table>  -->
   </p>
 </div>

@@ -1,9 +1,10 @@
-myApp.controller('UserController', function (UserService, $http) {
+myApp.controller('UserController', function (UserService, CheckTheDateService, $http) {
   console.log('UserController created');
   var vm = this;
   vm.userService = UserService;
   vm.userObject = UserService.userObject;
   vm.myFoodColl = UserService.myFoodCollection;
+  vm.checkTheDateService = CheckTheDateService;
 
   vm.sendText = function () {
     vm.text = {
@@ -32,8 +33,8 @@ myApp.controller('UserController', function (UserService, $http) {
     })
   }
   vm.getMyFoods = function () {
-    UserService.getfood();
-    console.log('in controller getMyFoods', vm.myFoodColl);
+    CheckTheDateService.getfood();
+    console.log('in user controller: getMyFoods', vm.myFoodColl);
   }
   vm.getMyFoods();
 });

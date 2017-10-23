@@ -35,13 +35,13 @@ myApp.factory('UserService', function ($http, $location) {
         $location.path("/home");
       });
     },
-    getfood: function () {
-      $http.get('/add-food').then(function (response) {
-        myFoodCollection.foods = response.data
-        console.log('getFood response.data ->', response.data);
-        console.log('getfood ->', myFoodCollection.foods);
-      })
-    }, //end getfood
+    // getfood: function () {
+    //   $http.get('/add-food').then(function (response) {
+    //     myFoodCollection.foods = response.data
+    //     console.log('getFood response.data ->', response.data);
+    //     console.log('getfood ->', myFoodCollection.foods);
+    //   })
+    // }, //end getfood
 
   } //end return
 
