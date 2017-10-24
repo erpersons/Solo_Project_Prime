@@ -6,7 +6,7 @@ myApp.service('CheckTheDateService', function ($http) {
         foods: []
     };
     var myFoodWasteCollection = {
-        waste: []
+        foods: [] 
     }
 
     self.getfood = function () {
@@ -39,23 +39,21 @@ myApp.service('CheckTheDateService', function ($http) {
             food: ''
         };
         console.log('foodToWaste ->', self.foodToWaste);
-        self.foodToWaste.food = wasteParam;
+        self.foodToWaste.food = wasteParam; //unnecessary
         console.log('wasteParam ->', wasteParam);
-        console.log('this is myFoodCollection.foods.wasted ->', myFoodCollection.foods.wasted); //logging undefined
 
-        if(myFoodCollection.foods.wasted == false) {
-            myFoodCollection.foods.wasted == true
-            console.log('wasted ->', wasted);
+        if (wasteParam.wasted == false) {
+            wasteParam.wasted = true
 
         } else {
             alert ('This is trying to be wasted'); //should never happen...
         };
-        myFoodWasteCollection.waste.push(wasteParam);
+        console.log('wasteParam ->', wasteParam);
 
-        return $http({
-            method: 'PUT',
-            url: '/waste-food/info/' + foodToWaste.food
-        }); //end $http put
+        // return $http({
+        //     method: 'PUT',
+        //     url: '/waste-food/info/' + wasteParam.id
+        // }); //end $http put
        
     } //end self.wasteFood
 

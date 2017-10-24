@@ -14,12 +14,15 @@
 
     <tbody>
 
-      <tr class="infoFoods" ng-repeat="x in ic.myFoodColl | filter : (wasted: false)">
+      <tr class="infoFoods" ng-repeat="x in ic.myFoodColl ">
+
+<!-- | filter : (wasted: false) -->
+
         <td>{{ x.food }} </td>
         <td>{{ x.days }}</td>
 
         <td>
-          <button ng-click="ic.wasteFoodFunc(x._id)" class="listBtns">Wasted =(</button>
+          <button ng-click="ic.wasteFoodFunc(x)" class="listBtns">Wasted =(</button>
         </td>
         <td>
           <button ng-click="ic.devourFood(x._id)" class="listBtns">Devoured!</button>
@@ -37,7 +40,10 @@
     </thead>
 
     <tbody>
-      <tr class="infoFoods" ng-repeat="x in ic.myFoodColl | filter : (wasted: true)">
+      <tr class="infoFoods" ng-repeat="x in ic.myFoodColl ">
+
+         <!-- | filter : (wasted: true) -->
+
         <td>{{ x.food }}</td>
         <td>{{ x.days }}</td>
 

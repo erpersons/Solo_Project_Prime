@@ -4,10 +4,11 @@ var path = require('path');
 var mongoose = require('mongoose');
 var FoodCollection = require('../models/dbInput.js')
 var bodyParser = require('body-parser');
-var query = 
 
 router.put('/info/:id', function (req, res){
-    console.log('in waste-food route')
+    var query = 'ObjectId("' + req.params.id +'")';
+    var whatever = {$set: { 'wasted' : true}, }
+    console.log('in waste-food route', query);
 
     var thrownFood = new FoodCollection({
         food: req.body.food,
