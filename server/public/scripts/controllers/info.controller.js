@@ -22,7 +22,10 @@ myApp.controller('InfoController', function (UserService, CheckTheDateService, $
 
   vm.wasteFoodFunc = function (foodParam) {
     console.log('in ic.wasteFoodFunc ->', foodParam);
-   CheckTheDateService.wasteFood(foodParam)
+    CheckTheDateService.wasteFood(foodParam).then(function(){
+      vm.getMyFoods(); //in .then for race conditions
+    })
+   
   }; //end wasteFoodFunc
 
 

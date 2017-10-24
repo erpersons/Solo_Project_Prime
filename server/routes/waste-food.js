@@ -6,7 +6,8 @@ var FoodCollection = require('../models/dbInput.js')
 var bodyParser = require('body-parser');
 
 router.put('/info/:id', function (req, res){
-    var query = { '"_id"': 'ObjectId("' + req.params.id + '")'};
+    // var query = { "_id": 'ObjectId("' + req.params.id + '")' };
+    var query = { "_id": req.params.id};
     console.log('query -------------------------------------->', query);
     // var whatever = {$set: { 'wasted' : true } };
     // console.log('in waste-food route -------------------------------------->', query);
