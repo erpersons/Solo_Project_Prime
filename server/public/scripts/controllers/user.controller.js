@@ -17,24 +17,35 @@ myApp.controller('UserController', function (UserService, CheckTheDateService, $
     });
   };
 
+  vm.clearInput = function () {
+    vm.foodIn = '';
+    vm.daysIn = '';
+  };
+
+
   vm.addFoodItem = function () {
     console.log('userObject', vm.userObject)
     vm.foodStuff = {
-      food: vm.foodIn, 
+      food: vm.foodIn,
       days: vm.daysIn,
-      userName: vm.userObject.userName
+      userName: vm.userObject.userName,
+      wasted: false
     };
     console.log('vm.foodStuff ->', vm.foodStuff);
     $http({
       method: 'POST',
       url: '/add-food',
       data: vm.foodStuff
-     
+
     })
+    vm.clearInput();
   }
   vm.getMyFoods = function () {
     CheckTheDateService.getfood();
     console.log('in user controller: getMyFoods', vm.myFoodColl);
   }
   vm.getMyFoods();
+
+ 
+
 });

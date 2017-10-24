@@ -1,5 +1,5 @@
 <div ng-include="'views/partials/nav.html'"></div>
-<div ng-controller="UserController" class="container">
+<div ng-init="uc.clearInput()" ng-controller="UserController" class="container">
 
     <h1 id="welcome" class="lead">Namaste & Happy Eating, {{uc.userObject.userName}}!</h1>
 

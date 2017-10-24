@@ -5,7 +5,8 @@ var Schema = mongoose.Schema;
 var foodSchema = new Schema({
     food: String,
     days: Number,
-    userName: String
+    userName: String,
+    wasted: Boolean
 });
 
 

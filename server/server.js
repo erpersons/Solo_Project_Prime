@@ -17,6 +17,7 @@ var userRouter = require('./routes/user.router');
 var registerRouter = require('./routes/register.router');
 var addFood = require('./routes/add-food');
 var devourFood = require('./routes/devour-food');
+var wasteFood = require('./routes/waste-food');
 
 
 var port = process.env.PORT || 5000;
@@ -43,6 +44,7 @@ app.use('/register', registerRouter);
 app.use('/user', userRouter);
 app.use('/add-food', addFood);
 app.use('/devour-food', devourFood);
+app.use('/waste-food', wasteFood);
 //~~~
 app.use('/send-sms', send); //send-sms
 //~~~

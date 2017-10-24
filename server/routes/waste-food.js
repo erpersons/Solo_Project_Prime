@@ -4,32 +4,25 @@ var path = require('path');
 var mongoose = require('mongoose');
 var FoodCollection = require('../models/dbInput.js')
 var bodyParser = require('body-parser');
+var query = 
 
-router.post('/', function (req, res) {
+router.put('/info/:id', function (req, res){
+    console.log('in waste-food route')
 
-    var newFood = new FoodCollection({
+    var thrownFood = new FoodCollection({
         food: req.body.food,
         days: req.body.days,
         userName: req.body.userName,
         wasted: req.body.wasted
     });
-    newFood.save(function (err) {
+    thrownFood.findOneAndUpdate(query, whatever, function (err) {
         if (err) {
-            console.log('no worky:', err );
+            console.log('no worky:', err);
             res.sendStatus(500);
         } else {
             res.sendStatus(200);
         }
     })
+}); //end router.put
 
-    
-});
-
-router.get('/', function (req, res) {
-    FoodCollection.find({userName : req.user.username}).then(function (stuff) {
-        console.log('req.user.username ->', req.user.username);
-        console.log('stuff:', stuff);
-        res.send(stuff);
-    });
-});
 module.exports = router;

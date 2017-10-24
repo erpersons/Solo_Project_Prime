@@ -19,6 +19,7 @@ myApp.controller('InfoController', function (UserService, CheckTheDateService, $
 
   //waste food 
   //~~~~~~~~~~~~~~
+
   // vm.foodWasteArr = [];
   // vm.wasteFoodFunc = function (foodx) {
   //   // console.log('in controller wasteFoodFunc', vm.myFoodColl);
@@ -31,6 +32,16 @@ myApp.controller('InfoController', function (UserService, CheckTheDateService, $
   //   vm.foodWasteArr.push(vm.myFoodColl.foods[index]);
   // }
   // vm.wasteFoodFunc();
+
+  // vm.foodWasteArr = [];
+  vm.wasteFoodFunc = function (foodParam) {
+    console.log('in ic.wasteFoodFunc ->', foodParam);
+   CheckTheDateService.wasteFood(foodParam).then(function (){
+    //  foodWasteArr.push(foodParam);
+    vm.getMyFoods(); //????? need a vm.getMyWasteFood()???
+   });
+  }; //end wasteFoodFunc
+
 
   //devour food 
   //~~~~~~~~~~~~~
