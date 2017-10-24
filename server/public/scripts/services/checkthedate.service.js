@@ -42,17 +42,9 @@ myApp.service('CheckTheDateService', function ($http) {
         self.foodToWaste.food = wasteParam; //unnecessary
         console.log('wasteParam ->', wasteParam);
 
-        if (wasteParam.wasted == false) {
-            wasteParam.wasted = true
-
-        } else {
-            alert ('This is trying to be wasted'); //should never happen...
-        };
-        console.log('wasteParam ->', wasteParam);
-
         return $http({
             method: 'PUT',
-            url: '/waste-food/info/' + wasteParam.id
+            url: '/waste-food/info/' + wasteParam._id
         }); //end $http put
        
     } //end self.wasteFood

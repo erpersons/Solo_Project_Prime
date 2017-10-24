@@ -6,21 +6,24 @@ var FoodCollection = require('../models/dbInput.js')
 var bodyParser = require('body-parser');
 
 router.put('/info/:id', function (req, res){
-    var query = 'ObjectId("' + req.params.id +'")';
-    var whatever = {$set: { 'wasted' : true}, }
-    console.log('in waste-food route', query);
+    var query = { '"_id"': 'ObjectId("' + req.params.id + '")'};
+    console.log('query -------------------------------------->', query);
+    // var whatever = {$set: { 'wasted' : true } };
+    // console.log('in waste-food route -------------------------------------->', query);
+    // console.log('FoodCollection -------------------------------------->', FoodCollection);
 
-    var thrownFood = new FoodCollection({
+    var wasteFood = new FoodCollection({
         food: req.body.food,
         days: req.body.days,
         userName: req.body.userName,
         wasted: req.body.wasted
     });
-    thrownFood.findOneAndUpdate(query, whatever, function (err) {
+    FoodCollection.findOneAndUpdate( query, { $set: { 'wasted': true } }, function (err) {
         if (err) {
-            console.log('no worky:', err);
+            console.log('no worky: -------------------------------------->', err);
             res.sendStatus(500);
         } else {
+            console.log('worky: <--------------------------------------');
             res.sendStatus(200);
         }
     })
