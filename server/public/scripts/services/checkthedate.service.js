@@ -50,10 +50,10 @@ myApp.service('CheckTheDateService', function ($http) {
         };
         console.log('wasteParam ->', wasteParam);
 
-        // return $http({
-        //     method: 'PUT',
-        //     url: '/waste-food/info/' + wasteParam.id
-        // }); //end $http put
+        return $http({
+            method: 'PUT',
+            url: '/waste-food/info/' + wasteParam.id
+        }); //end $http put
        
     } //end self.wasteFood
 

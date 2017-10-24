@@ -10,7 +10,7 @@ myApp.controller('InfoController', function (UserService, CheckTheDateService, $
   vm.getMyFoods = function () {
     CheckTheDateService.getfood().then( function(){
       vm.myFoodColl = CheckTheDateService.foods;
-      console.log(CheckTheDateService);
+      console.log('CheckTheDateService.foods', CheckTheDateService.foods);
       console.log('in controller getMyFoods ->', vm.myFoodColl);
     });
   }
@@ -22,10 +22,7 @@ myApp.controller('InfoController', function (UserService, CheckTheDateService, $
 
   vm.wasteFoodFunc = function (foodParam) {
     console.log('in ic.wasteFoodFunc ->', foodParam);
-   CheckTheDateService.wasteFood(foodParam).then(function (){
-    //  foodWasteArr.push(foodParam);
-    vm.getMyFoods(); //????? need a vm.getMyWasteFood()???
-   });
+   CheckTheDateService.wasteFood(foodParam)
   }; //end wasteFoodFunc
 
 

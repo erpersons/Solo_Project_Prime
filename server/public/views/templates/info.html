@@ -8,15 +8,14 @@
     <thead class="tHead">
       <th>Food |</th>
       <th># of days |</th>
-      <th> |</th>
       <th>Waste |</th>
     </thead>
 
     <tbody>
 
-      <tr class="infoFoods" ng-repeat="x in ic.myFoodColl ">
+      <tr class="infoFoods" ng-repeat="x in ic.myFoodColl | filter : {wasted: false}">
 
-<!-- | filter : (wasted: false) -->
+
 
         <td>{{ x.food }} </td>
         <td>{{ x.days }}</td>
@@ -36,13 +35,15 @@
   <table>
     <thead class="tHead">
       <th>Food Waste |</th>
-      <th>Date |</th>
+      <th># of days |</th>
+      <!-- will eventually become date -->
     </thead>
 
     <tbody>
-      <tr class="infoFoods" ng-repeat="x in ic.myFoodColl ">
+      <tr class="infoFoods" ng-repeat="x in ic.myFoodColl | filter : {wasted:true}">
+         
 
-         <!-- | filter : (wasted: true) -->
+         
 
         <td>{{ x.food }}</td>
         <td>{{ x.days }}</td>
