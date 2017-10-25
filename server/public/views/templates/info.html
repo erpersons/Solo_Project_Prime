@@ -15,8 +15,6 @@
 
       <tr class="infoFoods" ng-repeat="x in ic.myFoodColl | filter : {wasted: false}">
 
-
-
         <td>{{ x.food }} </td>
         <td>{{ x.days }}</td>
 
@@ -35,19 +33,16 @@
   <table>
     <thead class="tHead">
       <th>Food Waste |</th>
-      <th># of days |</th>
-      <!-- will eventually become date -->
+      <th>Date |</th>
+    
     </thead>
 
     <tbody>
-      <tr class="infoFoods" ng-repeat="x in ic.myFoodColl | filter : {wasted:true}">
-         
-
-         
+      <tr class="infoFoods" ng-repeat="x in ic.myFoodColl | filter : {wasted:true}" >
 
         <td>{{ x.food }}</td>
-        <td>{{ x.days }}</td>
-
+        <td>{{ x.date }}</td>
+         <!-- ng-bind="date | date:'MM/dd/yyyy'" -->
 
       </tr>
     </tbody>

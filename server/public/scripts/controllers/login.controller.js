@@ -3,7 +3,8 @@ myApp.controller('LoginController', function($http, $location, UserService) {
     var vm = this;
     vm.user = {
       username: '',
-      password: ''
+      password: '',
+      cellNumber: ''
     };
     vm.message = '';
 
@@ -20,14 +21,14 @@ myApp.controller('LoginController', function($http, $location, UserService) {
             $location.path('/user'); // http://localhost:5000/#/user
           } else {
             console.log('LoginController -- login -- failure: ', response);
-            vm.message = "Wrong!!";
+            vm.message = "Incorrect Username or Password";
           }
         }).catch(function(response){
           console.log('LoginController -- registerUser -- failure: ', response);
-          vm.message = "Wrong!!";
+          vm.message = "Incorrect Username or Password";
         });
       }
-    };
+    }; //end login
 
     vm.registerUser = function() {
       console.log('LoginController -- registerUser');
@@ -43,5 +44,6 @@ myApp.controller('LoginController', function($http, $location, UserService) {
           vm.message = "Please try again."
         });
       }
-    }
-});
+    } //end register
+
+}); //end myApp.controller

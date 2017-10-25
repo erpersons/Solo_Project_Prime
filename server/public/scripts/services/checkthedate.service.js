@@ -39,7 +39,6 @@ myApp.service('CheckTheDateService', function ($http) {
             food: ''
         };
         console.log('foodToWaste ->', self.foodToWaste);
-        self.foodToWaste.food = wasteParam; //unnecessary
         console.log('wasteParam ->', wasteParam);
 
         return $http({

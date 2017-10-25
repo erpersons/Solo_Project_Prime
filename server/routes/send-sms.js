@@ -7,6 +7,7 @@ var authToken = process.env.TWILIO_AUTH_TOKEN;
 
 
 router.post('/', function (req, res) {
+    // console.log('user.cellNumber', user.cellNumber);
     var toSend = req.body.message
     client.messages.create({
         body: toSend,

@@ -8,7 +8,9 @@ myApp.controller('UserController', function (UserService, CheckTheDateService, $
 
   vm.sendText = function () {
     vm.text = {
-      message: 'The unexamined life is not worth living'
+      message: 'the unexamined life is not worth living'
+      //make it the heroku link with a small message??
+      // 'The unexamined life is not worth living' || vm.myFoodColl ??
     };
     $http({
       method: 'POST',
@@ -29,7 +31,8 @@ myApp.controller('UserController', function (UserService, CheckTheDateService, $
       food: vm.foodIn,
       days: vm.daysIn,
       userName: vm.userObject.userName,
-      wasted: false
+      wasted: false,
+      date: Date()
     };
     console.log('vm.foodStuff ->', vm.foodStuff);
     $http({

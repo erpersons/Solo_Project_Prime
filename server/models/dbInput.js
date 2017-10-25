@@ -6,7 +6,9 @@ var foodSchema = new Schema({
     food: String,
     days: Number,
     userName: String,
-    wasted: Boolean
+    wasted: Boolean,
+    cellNumber: Number,
+    date: Date
 });
 
 

@@ -11,7 +11,9 @@ router.post('/', function (req, res) {
         food: req.body.food,
         days: req.body.days,
         userName: req.body.userName,
-        wasted: req.body.wasted
+        wasted: req.body.wasted,
+        cellNumber: req.body.cellNumber,
+        date: req.body.date
     });
     newFood.save(function (err) {
         if (err) {
