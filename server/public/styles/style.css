@@ -143,6 +143,18 @@ html {
   font-family: monospace;
 }
 
+.cellInput {
+  font-family: monospace;
+}
+
+.md-button {
+  border-radius: 10px;
+}
+
+.btn {
+  border-radius: 4px;
+}
+
 ul {
   list-style-type: none;
   margin: 0;

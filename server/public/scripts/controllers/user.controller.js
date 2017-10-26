@@ -9,8 +9,6 @@ myApp.controller('UserController', function (UserService, CheckTheDateService, $
   vm.sendText = function () {
     vm.text = {
       message: 'You\'ve got food in the fridge! https://limitless-beach-11146.herokuapp.com/#/home'
-      //make it the heroku link with a small message??
-      // 'The unexamined life is not worth living' || vm.myFoodColl ??
     };
     $http({
       method: 'POST',

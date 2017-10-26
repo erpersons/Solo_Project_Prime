@@ -11,6 +11,7 @@ router.get('/', function(req, res) {
     var userInfo = {
       username : req.user.username,
       cellNumber : req.user.cellNumber
+      
     };
     res.send(userInfo);
   } else {
