@@ -41,8 +41,7 @@
       <tr class="infoFoods" ng-repeat="x in ic.myFoodColl | filter : {wasted:true}" >
 
         <td>{{ x.food }}</td>
-        <td>{{ x.date }}</td>
-         <!-- ng-bind="date | date:'MM/dd/yyyy'" -->
+        <td>{{ x.date | date: 'shortDate' }}</td> 
 
       </tr>
     </tbody>

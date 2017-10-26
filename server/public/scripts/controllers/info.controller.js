@@ -16,7 +16,6 @@ myApp.controller('InfoController', function (UserService, CheckTheDateService, $
   }
   vm.getMyFoods();
 
-
   //waste food 
   //~~~~~~~~~~~~~~
 
