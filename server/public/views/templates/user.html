@@ -2,7 +2,6 @@
 <div ng-init="uc.clearInput()" ng-controller="UserController" class="container">
 
     <h1 id="welcome" class="lead">Namaste & Happy Eating, {{uc.userObject.userName}}!</h1>
-
     <p class="nameText">Food Name : </p>
 
     <!-- food input -->
@@ -15,13 +14,14 @@
     <br>
 
     <!-- Add Food Button -->
-    <md-button ng-click="uc.addFoodItem()" class="newFoodButton" class="btn btn-default">Add New Food</md-button>
-    <br>
+    <md-button ng-click="uc.addFoodItem()" class="newFoodButton btn btn-default">Add New Food</md-button>
+        <br>
 
-    <!-- Log Out Button -->
-    <md-button class="btn btn-default" ng-click="uc.userService.logout()">Log Out</md-button>
+        <!-- Log Out Button -->
+        <md-button class="logOut btn btn-default" ng-click="uc.userService.logout()">Log Out</md-button>
+        <br>
+        <!-- Send Text Button -->
+        <md-button class="sendTextBtn" ng-click="uc.sendText()">Send Text</md-button>
 
-    <!-- Send Text Button -->
-    <md-button class="sendTextBtn" ng-click="uc.sendText()">Send Text</md-button>
 
 </div>
