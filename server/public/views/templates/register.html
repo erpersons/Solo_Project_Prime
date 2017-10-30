@@ -3,15 +3,15 @@
   <h1 class="lead alert alert-danger" role="alert" ng-if="lc.message != ''">{{lc.message}}</h2>
   <form class="register_form" ng-submit="lc.registerUser()">
     <div>
-        <label for="username">Username:</label>
+        <label class="unCss" for="username">Username:</label>
         <input class="userRegInput" type="text" ng-model="lc.user.username" />
     </div>
     <div>
-        <label for="password">Password:</label>
+        <label class="unCss" for="password">Password:</label>
         <input type="password" ng-model="lc.user.password" />
     </div>
     <div>
-      <label for="cellNumber">Cell Number:</label>
+      <label class="unCss" for="cellNumber">Cell Number:</label>
       <input class="cellInput" type="cellNumber"ng-model="lc.user.cellNumber" />
     </div>
     <input class="registerBtn" class="btn btn-default" type="submit" name="submit" value="Register" />

@@ -60,9 +60,9 @@ html {
   border-radius: 8px;
 }
 
-  .registerBtn {
-   background-color: #ffcad4;
-   border-radius: 8px;
+.registerBtn {
+  background-color: #ffcad4;
+  border-radius: 8px;
 }
 
 .lead {
@@ -108,16 +108,21 @@ html {
 .sendTextBtn {
   font-family: monospace;
   background-color: #ffcad4;
+  color: white;
+  text-shadow: 1px 1px #9d8189;
+  /* padding-left: 20px; */
   text-align: center;
-  padding-left: 200px;
-  text-align: center;
+  border-radius: 8px;
 }
+
 .newFoodButton {
   font-family: monospace;
   background-color: #ffcad4;
   color: white;
   text-align: center;
-  padding-left: 20px;
+  text-shadow: 1px 1px #9d8189;
+  border-radius: 8px;
+  /* padding-left: 20px; */
 }
 
 .logOut {
@@ -125,62 +130,85 @@ html {
   background-color: #ffcad4;
   color: white;
   text-align: center;
-  padding-left: 20px;
+  text-shadow: 1px 1px #9d8189;
+  border-radius: 8px;
+  /* padding-left: 20px; */
 }
 
 .foodInput {
   font-family: monospace;
   padding-left: 20px;
 }
+
 .expirationText {
   font-family: monospace;
   padding-left: 20px;
 }
+
 .nameText {
   font-family: monospace;
   padding-left: 20px;
 }
+
 .daysInput {
   font-family: monospace;
   padding-left: 20px;
 }
+
 .userInput {
   font-family: monospace;
 }
+
 .userRegInput {
   font-family: monospace;
 }
+
 .infoFoods {
   font-family: monospace;
 }
+
 .tHead {
   font-family: monospace;
 }
+
 .listBtns {
   font-family: monospace;
   background-color: #d8e2dc;
+  border-radius: 8px;
 }
+
 .wasteAll {
   font-family: monospace;
 }
+
 .cellInput {
   font-family: monospace;
 }
-.md-button {
+
+.unCss {
+  padding-left: 20px;
+}
+
+
+/* .md-button {
   border-radius: 10px;
-}
-.btn {
+} */
+
+/* .btn {
   border-radius: 4px;
-}
+} */
+
 ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
 }
+
 li {
   float: left;
 }
+
 li a {
   display: block;
   color: white;
@@ -189,7 +217,9 @@ li a {
   text-decoration: none;
 }
 
+
 /* Change the link color to #111 (black) on hover */
+
 li a:hover {
   text-decoration: underline;
   color: #eee;
