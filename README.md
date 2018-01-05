@@ -1,58 +1,31 @@
 # Name of Project
-
-One Paragraph of project description goes here. Link to the live version of the app if it's hosted on Heroku.
+Save the Date is a fridge and pantry/food waste tracker. Food can either be 'devoured' or 'wasted'. Once food has been wasted, it becomes a permanent part of the database and cannot be deleted by the user. This gives the user the food waste information that they need. The 'send text' button will send a text message to the user in the form of a link to the web app. https://limitless-beach-11146.herokuapp.com/#/home
 
 ## Built With
 
-List technologies and frameworks here
+MEAN stack and Twilio.
 
-## Getting Started
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
-
-### Prerequisites
-
-Link to software that is required to install the app (e.g. node).
-
-- [Node.js](https://nodejs.org/en/)
-- List other prerequisites here
-
-
-### Installing
-
-Steps to get the development environment running.
-
-## Screen Shot
-
-Include one or two screen shots of your project here (optional). Remove if unused.
-
-## Documentation
-
-Link to a read-only version of your scope document or other relevant documentation here (optional). Remove if unused.
 
 ### Completed Features
 
 High level list of items completed.
 
-- [x] Feature a
-- [x] Feature b
+- [x] Text message feature
+- [x] Updating database upon click of 'wasted' button
+- [x] Table to display all foods
 
 ### Next Steps
 
 Features that you would like to add at some point in the future.
 
-- [ ] Feature c
+- [ ] Make text message automated upon eat-by date
 
-## Deployment
-
-Add additional notes about how to deploy this on a live system
 
 ## Authors
 
-* Name of author(s)
+* Emily Persons
 
 
 ## Acknowledgments
-
-* Hat tip to anyone who's code was used
+Prime Digital Academy instructors Dev Jana, Millie Walsh, Huck Brock
 # Solo_Project_Prime
